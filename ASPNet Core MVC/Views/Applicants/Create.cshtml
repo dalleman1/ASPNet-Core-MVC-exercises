@@ -1,0 +1,43 @@
+﻿@model ASPNet_Core_MVC.Data.Applicant
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link href="~/wwwroot/css/site.css" rel="stylesheet" />
+<p>
+    Want to work at JavaurmomJam? Fill out the form below to start your application.
+</p>
+<br />
+<div class="formwrapper">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experince" class="control-label"></label>
+                <textarea asp-for="experince" rows="4"></textarea>
+                <span asp-validation-for="experince" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Apply Now" class="btn btn-primary" />
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

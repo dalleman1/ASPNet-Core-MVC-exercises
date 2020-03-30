@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Jobs";
+}
+    <link href="~/wwwroot/css/site.css" rel="stylesheet" />
+
+    <div class="formwrapper">
+
+        <p>
+            Want to work at JavaurmomJam? Fill out the form below to start your application. 
+        </p> <br />
+
+        <form action="/" method="post">
+            <p>
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" value="" /> <br /><br />
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="text" id="email" value="" /> <br /><br />
+            </p>
+            <p>
+                <label for="exp">Experience:</label>
+                <textarea rows="4" cols="50" id="exp"></textarea> <br /><br />
+            </p>
+                <input type="submit" value="Apply Now"/>
+
+        </form>
+
+    </div>

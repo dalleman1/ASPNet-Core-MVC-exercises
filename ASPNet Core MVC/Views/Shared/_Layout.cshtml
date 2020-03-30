@@ -15,10 +15,11 @@
         </header>
         <nav>
             <ul>
-                <li><a href="/Home/Index">Home</a></li>
-                <li><a href="/Home/Menu">Menu</a></li>
+                <li><a asp-controller="Home" asp-action="Index" id="homelink">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Menu" id="menulink">Menu</a></li>
                 <li><a asp-controller="Home" asp-action="Music" id="musicLink">Music</a></li>
-                <li><a asp-controller="Jobs" asp-action="Index" class="myclass">Jobs</a></li>
+                <li><a asp-controller="Applicants" asp-action="Create">Jobs</a></li>
+                <li><a asp-controller="Applicants" asp-action="Index">Admin</a></li>
             </ul>
         </nav>
         <main id="content">
@@ -31,7 +32,7 @@
 
     </div>
 
-    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
